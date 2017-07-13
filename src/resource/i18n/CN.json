@@ -1,10 +1,51 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true
+  "slideOne": {
+    "title": "My name's Aram",
+    "remarks": "寄语：曾经渴望的是气贯长虹的洒脱，笑傲江湖的豪迈。然而一颗心抵不过时间的浸泡，沉淀成静而绵软。行走在星光洒满的路上，任一阵阵凉风吹拂，一切淡而远"
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "slideTwo": {
+    "title": "项目经验",
+    "project": [
+      {
+        "imgNum": 1,
+        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
+        "projectIntroduce": "项目详情"
+      },
+      {
+        "imgNum": 2,
+        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
+        "projectIntroduce": "项目详情"
+      },
+      {
+        "imgNum": 3,
+        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
+        "projectIntroduce": "项目详情"
+      },
+      {
+        "imgNum": 4,
+        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
+        "projectIntroduce": "项目详情"
+      },
+      {
+        "imgNum": 5,
+        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
+        "projectIntroduce": "项目详情"
+      },
+      {
+        "imgNum": 6,
+        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
+        "projectIntroduce": "项目详情"
+      },
+      {
+        "imgNum": 7,
+        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
+        "projectIntroduce": "项目详情"
+      },
+      {
+        "imgNum": 8,
+        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
+        "projectIntroduce": "项目详情"
+      }
+    ]
+  }
 }

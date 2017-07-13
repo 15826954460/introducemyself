@@ -79,10 +79,10 @@
 
 // x轴方向自身偏移
 .trsx(@trsx:-50%) {
-  -o-transform: translateY(@trsx);
-  -ms-transform: translateY(@trsx);
-  -moz-transform: translateY(@trsx);
-  -webkit-transform: translateY(@trsx);
+  -o-transform: translateX(@trsx);
+  -ms-transform: translateX(@trsx);
+  -moz-transform: translateX(@trsx);
+  -webkit-transform: translateX(@trsx);
   transform: translateX(@trsx);
 }
 
@@ -97,11 +97,18 @@
 
 // x，y轴方向自身偏移
 .trsl(@trsl:-50%) {
-  transform: translate(@trsl, @trsl);
   -o-transform: translate(@trsl, @trsl);
   -ms-transform: translate(@trsl, @trsl);
   -moz-transform: translate(@trsl, @trsl);
   -webkit-transform: translate(@trsl, @trsl);
+  transform: translate(@trsl, @trsl);
+}
+// transition 动画
+ .transition(@time:0s) {
+   -moz-transition:all @time linear;
+   -o-transition:all @time linear;
+   -webkit-transition:all @time linear;
+   transition: all @time linear;
 }
 
 // 绝对定位
@@ -138,7 +145,7 @@
   .abs;
   top: 50%;
   left: 50%;
-  .trsl;
+  .trsl();
 }
 
 
@@ -167,8 +174,6 @@
   border-radius: @br;
   -webkit-border-radius: @br;
   -moz-border-radius: @br;
-  -o-border-radius: @br;
-  -ms-border-radius: @br;
 }
 
 // 边框颜色
@@ -237,3 +242,7 @@
 @ddd: #ddd;
 @f7: #f7f7f7;
 @4d: #4d4d4d;
+@3d: #3d3d3d;
+@blue:#3A9BFF;
+@yellow:#FFCE42;
+@sblue:#1A12DB;

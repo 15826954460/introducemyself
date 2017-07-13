@@ -26,5 +26,17 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    font-size: 0;
+  }
+  .title {  // 其它页面的通用样式
+    font-family: HeroicCondensed;
+    font-size: .8rem;
+    color: #fff;
+    position:absolute;
+    top:15%;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    text-align:center;
   }
 </style>

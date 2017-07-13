@@ -36,17 +36,17 @@
     z-index: 100;
     .aside_item {
       .rel;
-      height: 20px;
-      width: .3rem;
+      height: 30px;
+      width: .35rem;
       &:hover {
         .cur;
       }
       &:hover i {
-        width: 0.66rem;
+        width: 0.7rem;
       }
       i {
         .abs;
-        bottom: 0;
+        .vc;
         right: 0;
         width: 100%;
         height: 1px;

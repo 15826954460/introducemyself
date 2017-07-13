@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+    <vheader @listenParent="goToNegativeDuideLine"></vheader>
     <swiper :options="swiperOption" ref="homeSwiper">
       <!-- 幻灯内容 -->
       <swiper-slide>
@@ -20,7 +21,6 @@
     </swiper>
     <guideline :activeitem="swiperOption.activeitem" :pageNum="pageNum"
                @changeActiveitem="goToNegativeDuideLine"></guideline>
-    <vheader></vheader>
     <vfooter :activeitem="swiperOption.activeitem" @changeActiveitem="goToNegativeDuideLine"></vfooter>
   </div>
 </template>
@@ -75,7 +75,7 @@
       }
     },
     mounted () {  // 这边就可以使用swiper这个对象去使用swiper官网中的那些方法
-      this.swiper.slideTo(0, 1000, false)  // 默认显示第一页
+      this.swiper.slideTo(2, 1000, false)  // 默认显示第一页
     },
     methods: {
       goToNegativeDuideLine (index) { // 通过点击跳转到相应的页面
