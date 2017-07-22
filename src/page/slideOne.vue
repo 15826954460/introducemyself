@@ -45,7 +45,7 @@
       .header {
         font-family: HeroicCondensed;
         font-size: 1rem;
-        transform: translateX(-100%);
+        transform: translateX(-20%);
       }
       .loadheader {
         transform: translateX(0);

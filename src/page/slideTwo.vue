@@ -1,5 +1,5 @@
 <template>
-  <div class="slide_three slide_children"
+  <div class="slide_two slide_children"
        :style="{backgroundImage:'url(' + slideTwoBg + ')'}">
     <div class="mark">
       <div class="introduce_contant">
@@ -19,7 +19,6 @@
 </script>
 <style lang="less" scoped>
   @import '../commonstyle/comment';
-
   .mark {
     width: 100%;
     height: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <div class="slide_Two slide_children" :style="{backgroundImage:'url(' + slideTwoBg + ')'}">
+  <div class="slide_three slide_children" :style="{backgroundImage:'url(' + slideTwoBg + ')'}">
     <div class="work_wrapper">
       <header class="title">Experience in project</header>
       <div class="work_img_box">
@@ -54,7 +54,22 @@
           </div>
         </div>
       </div>
-
+      <div class="github_left" id="github_left">
+        <header class="github">github作品</header>
+        <p class="demo_name">vue2.0仿nodejs中文社区demo</p>
+        <span class="git_add">github 地址：</span><br>
+        <a href="https://github.com/15826954460/vue2.0-nodejs" class="lianjie">https://github.com/15826954460/vue2.0-nodejs</a><br>
+        <span class="online">线上地址:</span><br>
+        <a href="http://demonodejs.applinzi.com" class="lianjie">http://demonodejs.applinzi.com</a>
+      </div>
+      <div class="github_right" id="github_right">
+        <header class="github">github作品</header>
+        <p class="demo_name">vue2.0仿饿了么webApp demo</p>
+        <span class="git_add">github 地址：</span><br>
+        <a href="https://github.com/15826954460/elmProject" class="lianjie">https://github.com/15826954460/elmProject</a><br>
+        <span class="online">线上地址:</span><br>
+        <a href="http://demoelmwebapp.applinzi.com" class="lianjie">http://demoelmwebapp.applinzi.com</a>
+      </div>
       <transition name="slide">
         <div class="product_wrapper" v-show="">
 
@@ -77,7 +92,6 @@
 </script>
 <style lang="less" scoped>
   @import '../commonstyle/comment';
-
   .work_wrapper {
     .work_img_box {
       .pc;
@@ -124,14 +138,14 @@
           bottom: 0;
           background: rgba(0, 0, 0, .3);
           width: 100%;
-          height:0;
+          height: 0;
           overflow: hidden;
           z-index: 10;
           .transition(.3s);
-          .clickIcon{
+          .clickIcon {
             .pc;
-            width:.3rem;
-            height:.3rem;
+            width: .3rem;
+            height: .3rem;
           }
         }
       }
@@ -259,13 +273,98 @@
         transform: rotateY(360deg);
       }
     }
-
-    .product_wrapper{
+    .github_left {
+      left:10%;
+    }
+    .github_right {
+      right:10%;
+    }
+    .github_left,
+    .github_right{
       .abs;
-      width:100%;
-      height:100%;
-      background:rgba(0,0,0,.8);
+      z-index:10;
+      top:25%;
       font-size:0;
+      color:@fff;
+      width:4rem;
+      transform-style: preserve-3d;
+      .github{
+        font-size:.24rem;
+      }
+      .demo_name{
+        font-size:.22rem;
+        .mb(.1rem);
+        color:rgba(255,255,255,.6);
+      }
+      .git_add,
+      .online{
+        font-size:.2rem;
+        color:@fff;
+        line-height:.5rem;
+      }
+      .lianjie{
+        .inb;
+        width:100%;
+        font-size:.2rem;
+        word-break: break-all;
+        line-height:.3rem;
+        .transition(.3s);
+        color:#8BC6FA;
+        &:hover{
+          .cur;
+          text-decoration: underline;
+          color:#0A67F0;
+        }
+      }
+    }
+    .product_wrapper {
+      .abs;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .8);
+      font-size: 0;
+    }
+  }
+
+  @media screen and(max-width: 1024px) {
+    .work_wrapper .work_img_box .work_img_wrapper .img_wrapper .mark {
+      height: 100%;
+    }
+    .work_wrapper .work_img_box{
+      width: 1.8rem;
+      height: 1.2rem;
+    }
+  }
+  @media screen and (min-width:912px) and (max-width: 1024px) {
+    #github_left,
+    #github_right{
+      top:20%;
+     .tc;
+      .github{
+        font-size:.18rem;
+        .mb();
+      }
+      .demo_name{
+        font-size:.16rem;
+        .mb();
+      }
+      .lianjie{
+        font-size:.14rem;
+      }
+    }
+  }
+  @media screen and (max-width:911px) {
+    #github_left{
+      .pc;
+      top:25%;
+      .tc;
+      width:100%;
+    }
+    #github_right{
+      .pc;
+      top:85%;
+      .tc;
+      width:100%;
     }
   }
 </style>

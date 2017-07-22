@@ -13,10 +13,10 @@
         <slideThree></slideThree>
       </swiper-slide>
       <swiper-slide>
-        <slideFour></slideFour>
+        <slideFour :activeitem="swiperOption.activeitem"></slideFour>
       </swiper-slide>
       <swiper-slide>
-        <slideFive></slideFive>
+        <slideFive :activeitem="swiperOption.activeitem"></slideFive>
       </swiper-slide>
     </swiper>
     <guideline :activeitem="swiperOption.activeitem" :pageNum="pageNum"
@@ -28,8 +28,8 @@
 <script>
   import {swiper, swiperSlide} from 'vue-awesome-swiper'
   import slideOne from './slideOne.vue'
-  import slideTwo from './slideTwo.vue'
   import slideThree from './slideThree.vue'
+  import slideTwo from './slideTwo.vue'
   import slideFour from './slideFour.vue'
   import slideFive from './slideFive.vue'
   import vheader from '../components/header.vue'
@@ -75,7 +75,7 @@
       }
     },
     mounted () {  // 这边就可以使用swiper这个对象去使用swiper官网中的那些方法
-      this.swiper.slideTo(2, 1000, false)  // 默认显示第一页
+      this.swiper.slideTo(0, 1000, false)  // 默认显示第一页
     },
     methods: {
       goToNegativeDuideLine (index) { // 通过点击跳转到相应的页面
@@ -91,13 +91,11 @@
     width: 100%;
     height: 100%;
   }
-
   /* 这是插件里面自带的class */
   .swiper-container,
   .swiper-wrapper,
   .swiper-slide {
     width: 100%;
     height: 100%;
-
   }
 </style>

@@ -19,7 +19,7 @@
            :class="{show_work: iconshow, icon_show : iconshow}"  @click.stop="toConnect(2)">
       <img :src="self" class="self icon_common"
            :class="{show_self: iconshow, icon_show : iconshow}" @click.stop="toConnect(1)">
-      <img :src="github" class="work icon_common"
+      <img :src="skills" class="work icon_common"
            :class="{show_github: iconshow, icon_show : iconshow}"  @click.stop="toConnect(3)">
       <img :src="tel" class="work icon_common"
            :class="{show_tel: iconshow, icon_show : iconshow}" @click.stop="toConnect(4)">
@@ -38,7 +38,7 @@
         house: require('../assets/image/house.svg'),
         self: require('../assets/image/self.svg'),
         work: require('../assets/image/work.svg'),
-        github: require('../assets/image/github.svg'),
+        skills: require('../assets/image/skills.svg'),
         tel: require('../assets/image/tel.svg'),
         language: ['CN', 'EN'], // 两种语言
         defaultLanguage: 0, // 默认选择中文

@@ -39,4 +39,10 @@
     width:100%;
     text-align:center;
   }
+  @media screen and (max-width: 1024px) {
+    .title{
+      font-size:.6rem;
+      top:10%;
+    }
+  }
 </style>
