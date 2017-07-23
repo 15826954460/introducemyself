@@ -1,51 +1,98 @@
 {
   "slideOne": {
     "title": "My name's Aram",
-    "remarks": "寄语：曾经渴望的是气贯长虹的洒脱，笑傲江湖的豪迈。然而一颗心抵不过时间的浸泡，沉淀成静而绵软。行走在星光洒满的路上，任一阵阵凉风吹拂，一切淡而远"
+    "remarks": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经渴望的是气贯长虹的洒脱，笑傲江湖的豪迈。然而一颗心抵不过时间的浸泡，沉淀成静而绵软。行走在星光洒满的路上，任一阵阵凉风吹拂，一切淡而远"
   },
   "slideTwo": {
-    "title": "项目经验",
-    "project": [
-      {
-        "imgNum": 1,
-        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
-        "projectIntroduce": "项目详情"
+    "selfInfo": {
+      "header": "个人资料",
+      "list": [
+        {
+          "family": "姓名",
+          "name": "柏运送"
+        },
+        {
+          "sex": "性别",
+          "type": "男"
+        },
+        {
+          "tel": "电话",
+          "num": 15826654460
+        },
+        {
+          "education ": "学历",
+          "undergraduate ":"本科"
+        },
+        {
+          "email": "邮箱",
+          "emailNum":"624793604@qq.com"
+        },
+        {
+          "profession": "专业",
+          "subject":"机械自动化"
+        },
+        {
+          "native ": "籍贯",
+          "place":"湖北黄石"
+        },
+        {
+          "graduation": "毕业院校",
+          "school":"武汉东湖学院"
+        },
+        {
+          "experience": "相关工作经验",
+          "year":"3年以上"
+        },
+        {
+          "politics": "党政治面貌",
+          "member":"党员"
+        }
+      ]
+    },
+    "target": {
+      "header": "求职目标",
+      "list": [
+        {
+          "hopeCity":"期望城市",
+          "city": "深圳市"
+        },
+        {
+          "category":"工作性质",
+          "fullTime":"全职"
+        },
+        {
+          "desired ":"期望职位",
+          "web":"WEB中级前端开发工程师"
+        }
+      ]
+    }
+  },
+  "slideThree":{
+    "title":"工作经验",
+    "demo":{
+      "nodejs":{
+        "gitHub":"github作品",
+        "name":"vue2.0仿nodejs中文社区demo",
+        "address":"github 地址",
+        "lianjie":"https://github.com/15826954460/vue2.0-nodejs",
+        "onlineAddress":"线上地址",
+        "online":"http://demonodejs.applinzi.com"
       },
-      {
-        "imgNum": 2,
-        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
-        "projectIntroduce": "项目详情"
-      },
-      {
-        "imgNum": 3,
-        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
-        "projectIntroduce": "项目详情"
-      },
-      {
-        "imgNum": 4,
-        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
-        "projectIntroduce": "项目详情"
-      },
-      {
-        "imgNum": 5,
-        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
-        "projectIntroduce": "项目详情"
-      },
-      {
-        "imgNum": 6,
-        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
-        "projectIntroduce": "项目详情"
-      },
-      {
-        "imgNum": 7,
-        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
-        "projectIntroduce": "项目详情"
-      },
-      {
-        "imgNum": 8,
-        "projectUrl":"项目网址 :<br/>http://www.nyhbest.com",
-        "projectIntroduce": "项目详情"
+      "elm": {
+        "gitHub":"github作品",
+        "name":"vue2.0仿饿了么webApp demo",
+        "address":"github 地址",
+        "lianjie":"https://github.com/15826954460/elmProject",
+        "onlineAddress":"线上地址",
+        "online":"http://demoelmwebapp.applinzi.com"
       }
-    ]
+    }
+  },
+  "slideFive":{
+    "thanks":"首先请允许我对你说声感谢！！！",
+    "time":"感谢您百忙之中抽出事件来阅读我的简历，感谢幸运之神的眷顾。",
+    "luck":"如果有幸获得贵公司的面试机会，我将感激不尽，见字如面，也是一份缘，希望可以成为贵公司的一员，与公共同成长进步，即便没有机会，我也在这里祝愿贵公司鹏程万里......",
+    "tel":"联系电话：15826954460",
+    "email":"电子邮箱：624793604@qq.com"
   }
 }

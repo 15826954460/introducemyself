@@ -1,10 +1,6 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  "slideOne": {
+    "title": "My name's Aram",
+    "remarks": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经渴望的是气贯长虹的洒脱，笑傲江湖的豪迈。然而一颗心抵不过时间的浸泡，沉淀成静而绵软。行走在星光洒满的路上，任一阵阵凉风吹拂，一切淡而远"
+  }
 }

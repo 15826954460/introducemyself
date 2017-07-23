@@ -76,58 +76,11 @@
     props: ['activeitem'],
     data () {
       return {
-        skillbg: require('../assets/image/skillbg.jpg'),
-        skillIcon: [
-          {
-            icon: require('../assets/image/html.svg'),
-            name: 'html5'
-          },
-          {
-            icon: require('../assets/image/css.svg'),
-            name: 'css3'
-          },
-          {
-            icon: require('../assets/image/js.svg'),
-            name: 'javascript'
-          },
-          {
-            icon: require('../assets/image/jquery.svg'),
-            name: 'javascript'
-          },
-          {
-            icon: require('../assets/image/bootstrap.svg'),
-            name: 'bootstrap'
-          },
-          {
-            icon: require('../assets/image/vue.svg'),
-            name: 'vue.js'
-          },
-          {
-            icon: require('../assets/image/angular.svg'),
-            name: 'AngularJs'
-          },
-          {
-            icon: require('../assets/image/less.svg'),
-            name: 'less'
-          },
-          {
-            icon: require('../assets/image/github.svg'),
-            name: 'git'
-          },
-          {
-            icon: require('../assets/image/webpack.svg'),
-            name: 'webpack'
-          },
-          {
-            icon: require('../assets/image/gulp.svg'),
-            name: 'gulp'
-          }
-        ]
+        skillbg: require('../assets/image/skillbg.jpg')
       }
     },
     mounted () {
       this.canvas()
-      this.risize()
     },
     methods: {
       canvas () { // 绘制canvas
@@ -172,11 +125,6 @@
             span[i].innerHTML = j + '%'
           }
         }, 40)
-      },
-      risize () { // 监听屏幕的改变事件
-        window.onresize = () => {
-          this.canvas()
-        }
       }
     },
     watch: { // 监听是否为当前页
@@ -195,6 +143,10 @@
   }
 
   .skill_wrapper {
+    .title{
+      font-size:20px;
+      clor:@fff;
+    }
     width: 100%;
     height: 100%;
   }
@@ -208,11 +160,12 @@
 
   .skills_list_item {
     width: 25%;
-    height: 50%;
+    .mb(10px);
     display: inline-block;
     .canvas_wrapper {
       .rel;
       margin: 0 auto;
+      .mb(10px);
       width: 2rem;
       height: 2rem;
       .b;
@@ -226,35 +179,12 @@
     }
     .skill_type {
       color: @fff;
-      font-size: .2rem;
+      font-size: 14px;
       .tc;
     }
   }
 
-  .skill_img_wrapper{
-    .pc;
-    top: 50%;
-    width: 80%;
-  }
-  .type_img_list{
-    .inb;
-    width:33.33%;
-    .mb(.1rem);
-    .tc;
-    .img_wrapper{
-      width:100%;
-      .tc;
-      .item_icon{
-        width:60%;
-      }
-      .item_name{
-        font-size:.2rem;
-        color:@fff;
-      }
-    }
-  }
-
-  @media screen and (min-width: 750px) and(max-width: 1024px) {
+  @media screen and (min-width: 750px) and(max-width: 1440px) {
     .skills_list_item .canvas_wrapper {
       width: 1.2rem;
       height: 1.2rem;
@@ -272,6 +202,14 @@
   @media screen and (max-width: 749px) {
     .skills_list {
       display: none;
+    }
+    .type_img_list{
+      display:inline-block;
+    }
+  }
+  @media screen and (max-width: 749px) and (min-width:500px) {
+    .skill_img_wrapper{
+      width:40%;
     }
     .type_img_list{
       display:inline-block;
