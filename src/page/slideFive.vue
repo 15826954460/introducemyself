@@ -61,7 +61,7 @@
     z-index:10;
     .tel,
     .email{
-      font-size:.16rem;
+      font-size:.2rem;
       color:@fff;
       line-height:.4rem;
     }
@@ -73,8 +73,8 @@
     >p {
       width:80%;
       margin:0 auto;
-      font-size: .16rem;
-      line-height:.4rem;
+      font-size: .34rem;
+      line-height:.5rem;
       color: #fff;
     }
   }
