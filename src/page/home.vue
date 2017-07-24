@@ -4,13 +4,13 @@
     <swiper :options="swiperOption" ref="homeSwiper">
       <!-- 幻灯内容 -->
       <swiper-slide>
-        <slideOne></slideOne>
+        <slideOne :activeitem="swiperOption.activeitem"></slideOne>
       </swiper-slide>
       <swiper-slide>
-        <slideTwo></slideTwo>
+        <slideTwo :activeitem="swiperOption.activeitem"></slideTwo>
       </swiper-slide>
       <swiper-slide>
-        <slideThree></slideThree>
+        <slideThree :activeitem="swiperOption.activeitem"></slideThree>
       </swiper-slide>
       <swiper-slide>
         <slideFour :activeitem="swiperOption.activeitem"></slideFour>
@@ -75,7 +75,7 @@
       }
     },
     mounted () {  // 这边就可以使用swiper这个对象去使用swiper官网中的那些方法
-      this.swiper.slideTo(0, 1000, false)  // 默认显示第一页
+      this.swiper.slideTo(1, 1000, false)  // 默认显示第一页
     },
     methods: {
       goToNegativeDuideLine (index) { // 通过点击跳转到相应的页面

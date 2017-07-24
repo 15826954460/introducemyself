@@ -10,11 +10,11 @@
 <style lang="less">
   @import './commonstyle/reset.css';
   @font-face {
-    font-family: 'HeroicCondensed';   /*字体名称*/
+    font-family: 'font1';   /*字体名称*/
     src: url('./assets/fonts/HeroicCondensed-Medium.ttf');       /*字体源文件*/
   }
   @font-face {
-    font-family: 'MicrosoftYaHeiLight';   /*字体名称*/
+    font-family: 'font2';   /*字体名称*/
     src: url('./assets/fonts/MicrosoftYaHeiLight.ttf');       /*字体源文件*/
   }
   #app {
@@ -30,19 +30,12 @@
   }
   .title {  // 其它页面的通用样式
     font-family: HeroicCondensed;
-    font-size: .8rem;
     color: #fff;
     position:absolute;
-    top:15%;
+    top:10%;
     left:50%;
     transform:translateX(-50%);
     width:100%;
     text-align:center;
-  }
-  @media screen and (max-width: 1024px) {
-    .title{
-      font-size:.6rem;
-      top:10%;
-    }
   }
 </style>

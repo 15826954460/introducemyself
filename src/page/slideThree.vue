@@ -1,7 +1,7 @@
 <template>
   <div class="slide_three slide_children" :style="{backgroundImage:'url(' + slideTwoBg + ')'}">
     <div class="work_wrapper">
-      <header class="title">Experience in project</header>
+      <header class="title">Part project experience</header>
       <div class="work_img_box">
         <div class="work_img_wrapper">
           <div class="img_wrapper img_common img1">
@@ -55,24 +55,23 @@
         </div>
       </div>
       <div class="github_left" id="github_left">
-        <header class="github">github作品</header>
-        <p class="demo_name">vue2.0仿nodejs中文社区demo</p>
-        <span class="git_add">github 地址：</span><br>
+        <header class="github">github作品：</header>
+        <p class="demo_name">vue2.0仿nodejs中文社区demo</p><br>
+        <span class="git_add">github 地址：</span>
         <a href="https://github.com/15826954460/vue2.0-nodejs" class="lianjie">https://github.com/15826954460/vue2.0-nodejs</a><br>
-        <span class="online">线上地址:</span><br>
+        <span class="online">线上地址：</span>
         <a href="http://demonodejs.applinzi.com" class="lianjie">http://demonodejs.applinzi.com</a>
       </div>
       <div class="github_right" id="github_right">
-        <header class="github">github作品</header>
-        <p class="demo_name">vue2.0仿饿了么webApp demo</p>
-        <span class="git_add">github 地址：</span><br>
+        <header class="github">github作品：</header>
+        <p class="demo_name">vue2.0仿饿了么webApp demo</p><br>
+        <p class="git_add">github 地址：</p>
         <a href="https://github.com/15826954460/elmProject" class="lianjie">https://github.com/15826954460/elmProject</a><br>
-        <span class="online">线上地址:</span><br>
+        <p class="online">线上地址：</p>
         <a href="http://demoelmwebapp.applinzi.com" class="lianjie">http://demoelmwebapp.applinzi.com</a>
       </div>
       <transition name="slide">
         <div class="product_wrapper" v-show="">
-
         </div>
       </transition>
     </div>
@@ -93,10 +92,13 @@
 <style lang="less" scoped>
   @import '../commonstyle/comment';
   .work_wrapper {
+    .title{
+      .f20;
+    }
     .work_img_box {
       .pc;
-      width: 2.4rem;
-      height: 1.6rem;
+      width: 1.5rem;
+      height: 1rem;
       perspective: 5000px;
       transform-style: preserve-3d;
       -webkit-transform: rotateX(-30deg) translate(-50%);
@@ -150,60 +152,60 @@
         }
       }
       .img1 {
-        -webkit-transform: rotateY(45deg) translateZ(3.2rem);
-        -moz-transform: rotateY(45deg) translateZ(3.2rem);
-        -ms-transform: rotateY(45deg) translateZ(3.2rem);
-        -o-transform: rotateY(45deg) translateZ(3.2rem);
-        transform: rotateY(45deg) translateZ(3.2rem);
+        -webkit-transform: rotateY(45deg) translateZ(2.4rem);
+        -moz-transform: rotateY(45deg) translateZ(2.4rem);
+        -ms-transform: rotateY(45deg) translateZ(2.4rem);
+        -o-transform: rotateY(45deg) translateZ(2.4rem);
+        transform: rotateY(45deg) translateZ(2.4rem);
       }
       .img2 {
-        -webkit-transform: rotateY(90deg) translateZ(3.2rem);
-        -moz-transform: rotateY(90deg) translateZ(3.2rem);
-        -ms-transform: rotateY(90deg) translateZ(3.2rem);
-        -o-transform: rotateY(90deg) translateZ(3.2rem);
-        transform: rotateY(90deg) translateZ(3.2rem);
+        -webkit-transform: rotateY(90deg) translateZ(2.4rem);
+        -moz-transform: rotateY(90deg) translateZ(2.4rem);
+        -ms-transform: rotateY(90deg) translateZ(2.4rem);
+        -o-transform: rotateY(90deg) translateZ(2.4rem);
+        transform: rotateY(90deg) translateZ(2.4rem);
       }
       .img3 {
-        -webkit-transform: rotateY(135deg) translateZ(3.2rem);
-        -moz-transform: rotateY(135deg) translateZ(3.2rem);
-        -ms-transform: rotateY(135deg) translateZ(3.2rem);
-        -o-transform: rotateY(135deg) translateZ(3.2rem);
-        transform: rotateY(135deg) translateZ(3.2rem);
+        -webkit-transform: rotateY(135deg) translateZ(2.4rem);
+        -moz-transform: rotateY(135deg) translateZ(2.4rem);
+        -ms-transform: rotateY(135deg) translateZ(2.4rem);
+        -o-transform: rotateY(135deg) translateZ(2.4rem);
+        transform: rotateY(135deg) translateZ(2.4rem);
       }
       .img4 {
-        -webkit-transform: rotateY(180deg) translateZ(3.2rem);
-        -moz-transform: rotateY(180deg) translateZ(3.2rem);
-        -ms-transform: rotateY(180deg) translateZ(3.2rem);
-        -o-transform: rotateY(180deg) translateZ(3.2rem);
-        transform: rotateY(180deg) translateZ(3.2rem);
+        -webkit-transform: rotateY(180deg) translateZ(2.4rem);
+        -moz-transform: rotateY(180deg) translateZ(2.4rem);
+        -ms-transform: rotateY(180deg) translateZ(2.4rem);
+        -o-transform: rotateY(180deg) translateZ(2.4rem);
+        transform: rotateY(180deg) translateZ(2.4rem);
       }
       .img5 {
-        -webkit-transform: rotateY(225deg) translateZ(3.2rem);
-        -moz-transform: rotateY(225deg) translateZ(3.2rem);
-        -ms-transform: rotateY(225deg) translateZ(3.2rem);
-        -o-transform: rotateY(225deg) translateZ(3.2rem);
-        transform: rotateY(225deg) translateZ(3.2rem);
+        -webkit-transform: rotateY(225deg) translateZ(2.4rem);
+        -moz-transform: rotateY(225deg) translateZ(2.4rem);
+        -ms-transform: rotateY(225deg) translateZ(2.4rem);
+        -o-transform: rotateY(225deg) translateZ(2.4rem);
+        transform: rotateY(225deg) translateZ(2.4rem);
       }
       .img6 {
-        -webkit-transform: rotateY(270deg) translateZ(3.2rem);
-        -moz-transform: rotateY(270deg) translateZ(3.2rem);
-        -ms-transform: rotateY(270deg) translateZ(3.2rem);
-        -o-transform: rotateY(270deg) translateZ(3.2rem);
-        transform: rotateY(270deg) translateZ(3.2rem);
+        -webkit-transform: rotateY(270deg) translateZ(2.4rem);
+        -moz-transform: rotateY(270deg) translateZ(2.4rem);
+        -ms-transform: rotateY(270deg) translateZ(2.4rem);
+        -o-transform: rotateY(270deg) translateZ(2.4rem);
+        transform: rotateY(270deg) translateZ(2.4rem);
       }
       .img7 {
-        -webkit-transform: rotateY(315deg) translateZ(3.2rem);
-        -moz-transform: rotateY(315deg) translateZ(3.2rem);
-        -ms-transform: rotateY(315deg) translateZ(3.2rem);
-        -o-transform: rotateY(315deg) translateZ(3.2rem);
-        transform: rotateY(315deg) translateZ(3.2rem);
+        -webkit-transform: rotateY(315deg) translateZ(2.4rem);
+        -moz-transform: rotateY(315deg) translateZ(2.4rem);
+        -ms-transform: rotateY(315deg) translateZ(2.4rem);
+        -o-transform: rotateY(315deg) translateZ(2.4rem);
+        transform: rotateY(315deg) translateZ(2.4rem);
       }
       .img8 {
-        -webkit-transform: rotateY(360deg) translateZ(3.2rem);
-        -moz-transform: rotateY(360deg) translateZ(3.2rem);
-        -ms-transform: rotateY(360deg) translateZ(3.2rem);
-        -o-transform: rotateY(360deg) translateZ(3.2rem);
-        transform: rotateY(360deg) translateZ(3.2rem);
+        -webkit-transform: rotateY(360deg) translateZ(2.4rem);
+        -moz-transform: rotateY(360deg) translateZ(2.4rem);
+        -ms-transform: rotateY(360deg) translateZ(2.4rem);
+        -o-transform: rotateY(360deg) translateZ(2.4rem);
+        transform: rotateY(360deg) translateZ(2.4rem);
       }
     }
     @-moz-keyframes round {
@@ -274,40 +276,42 @@
       }
     }
     .github_left {
-      left:10%;
+      left:2%;
     }
     .github_right {
-      right:10%;
+      border:1px solid red;
+      right:2%;
     }
     .github_left,
     .github_right{
       .abs;
       z-index:10;
-      top:25%;
+      top:27%;
       font-size:0;
       color:@fff;
-      width:4rem;
+      width:250px;
+      word-break: break-all;
+      line-height:25px;
       transform-style: preserve-3d;
       .github{
-        font-size:.24rem;
+        font-size:14px;
       }
       .demo_name{
-        font-size:.22rem;
-        .mb(.1rem);
+        font-size:14px;
+        /*.mb(.1rem);*/
         color:rgba(255,255,255,.6);
       }
       .git_add,
       .online{
-        font-size:.2rem;
+        font-size:14px;
         color:@fff;
-        line-height:.5rem;
+        line-height:20px;
       }
       .lianjie{
-        .inb;
-        width:100%;
-        font-size:.2rem;
+        .b;
+        font-size:14px;
         word-break: break-all;
-        line-height:.3rem;
+        line-height:20px;
         .transition(.3s);
         color:#8BC6FA;
         &:hover{
@@ -339,32 +343,60 @@
     #github_left,
     #github_right{
       top:20%;
-     .tc;
       .github{
-        font-size:.18rem;
+        font-size:14px;
         .mb();
       }
       .demo_name{
-        font-size:.16rem;
+        font-size:14px;
         .mb();
       }
       .lianjie{
-        font-size:.14rem;
+        font-size:14px;
       }
     }
   }
-  @media screen and (max-width:911px) {
+  @media screen and (max-width:650px) {
+    #github_right,
     #github_left{
       .pc;
-      top:25%;
-      .tc;
+     .tc;
       width:100%;
+      line-height:20px;
+      .github,
+      .git_add,
+      .online,
+      .demo_name,
+      .lianjie{
+        .inb;
+      }
+      .github,
+      .git_add,
+      .online{
+        .mr(10px);
+      }
+
+    }
+    #github_left{
+      top:27%;
     }
     #github_right{
-      .pc;
       top:85%;
-      .tc;
-      width:100%;
+    }
+  }
+  @media screen and (max-width:500px) {
+    #github_left,
+    #github_right{
+      .github,
+      .git_add,
+      .online,
+      .demo_name,
+      .lianjie {
+         .b;
+        line-height:15px;
+        padding:0;
+        margin:0;
+      }
     }
   }
 </style>
