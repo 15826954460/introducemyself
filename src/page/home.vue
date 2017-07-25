@@ -52,6 +52,7 @@
           debugger: true,
           onTransitionStart (swiper) { //  //这个位置放swiper的回调方法
             this.activeitem = swiper.activeIndex
+            window.localStorage.setItem('activeIndex', this.activeitem)
           }
         },
         pageNum: 5
@@ -75,12 +76,21 @@
       }
     },
     mounted () {  // 这边就可以使用swiper这个对象去使用swiper官网中的那些方法
-      this.swiper.slideTo(1, 1000, false)  // 默认显示第一页
+      let [win, index] = [window.localStorage, null]
+      // 用户刷新页面跳转到当前页（默认为第一页）
+      if (win.getItem('activeIndex') === null) {
+        index = 0
+      } else {
+        index = parseInt(win.getItem('activeIndex'))
+      }
+      this.swiperOption.activeitem = index
+      this.swiper.slideTo(index, 1000, false)  // 默认显示第一页
     },
     methods: {
       goToNegativeDuideLine (index) { // 通过点击跳转到相应的页面
         this.swiperOption.activeitem = index
-        this.swiper.slideTo(this.swiperOption.activeitem, 1000, false)
+        this.swiper.slideTo(index, 1000, false)
+        window.localStorage.setItem('activeIndex', index)
       }
     }
   }
@@ -97,5 +107,11 @@
   .swiper-slide {
     width: 100%;
     height: 100%;
+  }
+  .particles-js-canvas-el{
+    position:absolute;
+    z-index:-10;
+    top:0;
+    left:0;
   }
 </style>

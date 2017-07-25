@@ -5,16 +5,21 @@ import App from './App'
 import router from './router'
 import 'font-awesome/css/font-awesome.min.css'
 import swiper from 'vue-awesome-swiper'
-import VueI18n from 'vue-i18n'
-
+import Vuex from 'vuex'
+import store from './store/index'
+import {i18n} from './resource/i8nconfig'
+import particles from 'particles.js'
 Vue.use(swiper)
-Vue.use(VueI18n)
+Vue.use(Vuex)
+Vue.use(particles)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
+  i18n,
   template: '<App/>',
   components: { App }
 })

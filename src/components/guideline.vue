@@ -33,7 +33,7 @@
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    z-index: 100;
+    z-index: 10;
     .aside_item {
       .rel;
       height: 30px;

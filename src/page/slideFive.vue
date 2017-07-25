@@ -1,9 +1,9 @@
 <template>
   <div class="slide_five slide_children" :style="{backgroundImage: 'url(' + contactbg + ')'}">
     <div class="slide_five_content">
-      <p class="thanks">首先请允许我对你说声感谢！！！</p>
-      <p class="time">感谢您百忙之中抽出事件来阅读我的简历，感谢幸运之神的眷顾。</p>
-      <p class="luck">如果有幸获得贵公司的面试机会，我将感激不尽，见字如面，也是一份缘，希望可以成为贵公司的一员，与公共同成长进步，即便没有机会，我也在这里祝愿贵公司鹏程万里......</p>
+      <p class="thanks">{{$t('slideFive.thanks')}}</p>
+      <p class="time">{{$t('slideFive.time')}}</p>
+      <p class="luck">{{$t('slideFive.luck')}}</p>
     </div>
   </div>
 </template>
@@ -12,31 +12,49 @@
     props: ['activeitem'],
     data () {
       return {
-        contactbg: require('../assets/image/finance_bg.jpg')
+        contactbg: require('../assets/image/finance_bg.jpg'),
+        index: 0
       }
-    },
-    mounted () {
-      this.autotype()
     },
     methods: {
       autotype () {
         let div = document.querySelector('.slide_five_content')
         let str = div.innerHTML // 获取内容
-        let index = 0
+        let index = this.index
         div.innerHTML = '' // 清空内容
-        let timer = setInterval(function () {
-          let current = str.substr(index, 1) // 选取第一个标签的左尖括号
-          if (current === '<') { // 碰到标签直接整个进行截取
-            index = str.indexOf('>', index) + 1
-          } else {
-            index++
-          }
-          div.innerHTML = str.substring(0, index) + '_'
-          if (index >= str.length) {
-            clearInterval(timer)
-            div.innerHTML = str
-          }
-        }, 100)
+        if (index === 0) { // 只有index为0的时候才会加载改打字机效果
+          let timer = setInterval(() => {
+            let current = str.substr(index, 1) // 选取第一个标签的左尖括号
+            if (current === '<') { // 碰到标签直接整个进行截取
+              index = str.indexOf('>', index) + 1
+            } else {
+              index++
+            }
+            this.index = index
+            div.innerHTML = str.substring(0, index) + '_'
+            if (index >= str.length) {
+              this.index = 0 // 每一次加载完成，重新将index清0，下一次进入的时候可以正常加载
+              clearInterval(timer)
+              div.innerHTML = str
+            }
+          }, 100)
+        }
+      }
+    },
+    watch: { // 每次进入当前页就加载动画，同时改变其他页面的状态
+      activeitem: function () {
+        if (this.activeitem === 4) {
+          this.$store.commit('setLoadingImg', false)
+          this.$store.commit('setLoadingAuthor', false)
+          this.$store.commit('setLoadingApperception', false)
+          this.$store.commit('setLaseCommon', false)
+          this.$store.commit('setLoadingItem', false)
+          this.$store.commit('setLoadingAbout', false)
+          this.$store.commit('setLoading', false)
+          this.$store.commit('setLoadingText', false)
+          this.$store.commit('setBounced', false)
+          this.autotype()
+        }
       }
     }
   }
