@@ -10,3 +10,4 @@ export const loadingAbout = state => state.loadingAbout
 export const Loading = state => state.Loading
 export const loadingText = state => state.loadingText
 export const bounced = state => state.bounced
+export const loadingBtn = state => state.loadingBtn

@@ -145,6 +145,7 @@
           this.$store.commit('setLoadingAbout', false)
           this.$store.commit('setLoading', false)
           this.$store.commit('setLoadingText', false)
+          this.$store.commit('setLoadingBtn', false)
         }
       }
     }

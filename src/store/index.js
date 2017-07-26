@@ -15,7 +15,8 @@ const state = {
   loadingAbout: false, // 加载icon
   Loading: false, // 加载text
   loadingText: false,
-  bounced: false
+  bounced: false,
+  loadingBtn: false
 }
 export default new Vuex.Store({
   state,

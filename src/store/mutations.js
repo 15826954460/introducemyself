@@ -28,3 +28,6 @@ export const setLoadingText = (state, loadingText) => {
 export const setBounced = (state, bounced) => {
   state.bounced = bounced
 }
+export const setLoadingBtn = (state, loadingBtn) => {
+  state.loadingBtn = loadingBtn
+}

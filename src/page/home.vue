@@ -18,6 +18,9 @@
       <swiper-slide>
         <slideFive :activeitem="swiperOption.activeitem"></slideFive>
       </swiper-slide>
+      <swiper-slide>
+        <heart :activeitem="swiperOption.activeitem"></heart>
+      </swiper-slide>
     </swiper>
     <guideline :activeitem="swiperOption.activeitem" :pageNum="pageNum"
                @changeActiveitem="goToNegativeDuideLine"></guideline>
@@ -35,6 +38,7 @@
   import vheader from '../components/header.vue'
   import vfooter from '../components/footer.vue'
   import guideline from '../components/guideline.vue'
+  import heart from './slideSix.vue'
   export default{
     data () {
       return {
@@ -55,7 +59,7 @@
             window.localStorage.setItem('activeIndex', this.activeitem)
           }
         },
-        pageNum: 5
+        pageNum: 6
       }
     },
     components: {
@@ -68,7 +72,8 @@
       slideFive,
       vheader,
       vfooter,
-      guideline
+      guideline,
+      heart
     },
     computed: {
       swiper () { // 定义这个swiper对象

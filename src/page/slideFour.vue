@@ -160,6 +160,7 @@
           this.$store.commit('setLoadingAbout', false)
           this.$store.commit('setLoading', false)
           this.$store.commit('setBounced', false)
+          this.$store.commit('setLoadingBtn', false)
           this.loadingLogic()
         }
       }

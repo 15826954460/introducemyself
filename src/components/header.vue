@@ -80,11 +80,16 @@
 </script>
 <style lang="less" scoped>
   @import '../commonstyle/comment';
-
-  .taiji_wrapper {
-    position: fixed;
-    font-size: 0;
+  .header{
+    .fix;
     top: 20px;
+    z-index:100;
+    width:100%;
+    height:40px;
+  }
+  .taiji_wrapper {
+    .abs;
+    font-size: 0;
     left: 0;
     z-index: 10;
     height: 40px;

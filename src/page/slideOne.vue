@@ -2,7 +2,9 @@
   <div class="slide_one slide_children" id="particles-js">
     <div class="content_wrapper">
       <a class="self" href="https://github.com/15826954460">
-        <img :src="self" alt="" class="box-shadow" :class="{img_loading:loadingImg}">
+        <div class="img_wrapper">
+          <img :src="self" alt="" class="box-shadow" :class="{img_loading:loadingImg}">
+        </div>
         <p class="author" :class="{author_loading:loadingAuthor}">{{$t('slideOne.title')}}</p>
       </a>
       <div class="apperception_wrapper"
@@ -82,6 +84,7 @@
           this.$store.commit('setLoading', false)
           this.$store.commit('setLoadingText', false)
           this.$store.commit('setBounced', false)
+          this.$store.commit('setLoadingBtn', false)
         }
       }
     }
@@ -103,30 +106,32 @@
       margin: 0 auto;
       .self {
         .b;
-        width: 1.2rem;
-        margin: 0 auto;
-        .pt(.8rem);
-        .mb(30px);
         .tc;
-        img {
+        .mb(30px);
+        .pt(.8rem);
+        .img_wrapper{
           width: 1.2rem;
-          height: 1.2rem;
-          transform: scale(0);
-          .b-r(50%);
-          .mb(10px);
-          opacity: 0;
-          .transition(1s);
-          &:hover {
-            .cur;
-            box-shadow: 0 0 20px #FFFE0A;
-            -webkit-box-shadow: 0 0 20px #FFFE0A;
-            -moz-box-shadow: 0 0 20px #FFFE0A;
-            -o-box-shadow: 0 0 20px #FFFE0A;
+          margin: 0 auto;
+          img {
+            width: 1.2rem;
+            height: 1.2rem;
+            transform: scale(0);
+            .b-r(50%);
+            .mb(10px);
+            opacity: 0;
+            .transition(1s);
+            &:hover {
+              .cur;
+              box-shadow: 0 0 20px #FFFE0A;
+              -webkit-box-shadow: 0 0 20px #FFFE0A;
+              -moz-box-shadow: 0 0 20px #FFFE0A;
+              -o-box-shadow: 0 0 20px #FFFE0A;
+            }
           }
-        }
-        .img_loading {
-          transform: scale(1);
-          opacity: 1;
+          .img_loading {
+            transform: scale(1);
+            opacity: 1;
+          }
         }
         .author {
           font-family: font2;

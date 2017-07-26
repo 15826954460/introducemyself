@@ -1,5 +1,5 @@
 <template>
-  <div class="slide_two slide_children">
+  <div class="slide_two slide_children" :style="{backgroundImage: 'url(' + bgImg + ')'}">
     <div class="wrapper">
       <header class="about_me" :class="{about_transition: loadingAbout}">
         {{$t('slideTwo.title')}}</header>
@@ -40,6 +40,7 @@
     props: ['activeitem'],
     data () {
       return {
+        bgImg: require('../assets/image/plane.png'),
         graudation: require('../assets/image/graudation.svg'),
         address: require('../assets/image/address.svg'),
         status: require('../assets/image/status.svg'),
@@ -83,6 +84,7 @@
           this.$store.commit('setLaseCommon', false)
           this.$store.commit('setLoadingText', false)
           this.$store.commit('setBounced', false)
+          this.$store.commit('setLoadingBtn', false)
         }
       }
     }
@@ -95,8 +97,9 @@
     .rel;
     width: 100vw;
     height: 100vh;
-    background: #8BB68B;
     .pt(1rem);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 
   .about_me {
