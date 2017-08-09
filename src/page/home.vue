@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div id="index">
     <vheader @listenParent="goToNegativeDuideLine"></vheader>
     <swiper :options="swiperOption" ref="homeSwiper">
       <!-- 幻灯内容 -->
@@ -102,16 +102,16 @@
 </script>
 
 <style lang="less">
-  .index {
-    width: 100%;
-    height: 100%;
+  #index {
+    width: 100vw;
+    height: 100vh;
   }
   /* 这是插件里面自带的class */
-  .swiper-container,
+  .swiper-container.swiper-container-vertical.swiper-container-autoheight,
   .swiper-wrapper,
   .swiper-slide {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
   }
   .particles-js-canvas-el{
     position:absolute;

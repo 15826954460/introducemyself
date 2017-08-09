@@ -38,7 +38,7 @@
       <div class="btn_wrapper">
         <a id="audio" class="btn" @click="changeplay" :class="{loadingBtn:loadingBtn}">关闭背景音乐</a>
       </div>
-      <audio id="music" autoplay="autoplay" loop="loop" preload="auto" src="http://www.xyptz.cn/aini.mp3">
+      <audio id="music" autoplay="autoplay" loop="loop" preload="auto" src="./static/audio/My_Love.mp3">
       </audio>
     </div>
     <canvas id="heart"></canvas>

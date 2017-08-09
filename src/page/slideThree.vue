@@ -20,48 +20,6 @@
               <img :src="clickIcon" class="clickIcon">
             </div>
           </a>
-          <!--<a class="img_wrapper img_common img2" @click="judge">-->
-          <!--<img :src="img1">-->
-          <!--<div class="mark">-->
-          <!--<img :src="clickIcon" class="clickIcon">-->
-          <!--</div>-->
-          <!--</a>-->
-          <!--<a class="img_wrapper img_common img3" @click="judge">-->
-          <!--<img :src="img1">-->
-          <!--<div class="mark">-->
-          <!--<img :src="clickIcon" class="clickIcon">-->
-          <!--</div>-->
-          <!--</a>-->
-          <!--<a class="img_wrapper img_common img4" @click="judge">-->
-          <!--<img :src="img1">-->
-          <!--<div class="mark">-->
-          <!--<img :src="clickIcon" class="clickIcon">-->
-          <!--</div>-->
-          <!--</a>-->
-          <!--<a class="img_wrapper img_common img5" @click="judge">-->
-          <!--<img :src="img1">-->
-          <!--<div class="mark">-->
-          <!--<img :src="clickIcon" class="clickIcon">-->
-          <!--</div>-->
-          <!--</a>-->
-          <!--<a class="img_wrapper img_common img6" @click="judge">-->
-          <!--<img :src="img1">-->
-          <!--<div class="mark">-->
-          <!--<img :src="clickIcon" class="clickIcon">-->
-          <!--</div>-->
-          <!--</a>-->
-          <!--<a class="img_wrapper img_common img7" @click="judge">-->
-          <!--<img :src="img1">-->
-          <!--<div class="mark">-->
-          <!--<img :src="clickIcon" class="clickIcon">-->
-          <!--</div>-->
-          <!--</a>-->
-          <!--<a class="img_wrapper img_common img8" @click="judge">-->
-          <!--<img :src="img1">-->
-          <!--<div class="mark">-->
-          <!--<img :src="clickIcon" class="clickIcon">-->
-          <!--</div>-->
-          <!--</a>-->
         </div>
       </div>
       <div class="github_left" id="github_left">
@@ -153,7 +111,6 @@
 </script>
 <style lang="less" scoped>
   @import '../commonstyle/comment';
-
   .work_wrapper {
     width: 100%;
     height: 100%;

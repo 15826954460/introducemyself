@@ -3,7 +3,7 @@
     <div class="content_wrapper">
       <a class="self" href="https://github.com/15826954460">
         <div class="img_wrapper">
-          <img :src="self" alt="" class="box-shadow" :class="{img_loading:loadingImg}">
+          <img :src="self" class="box-shadow" :class="{img_loading:loadingImg}">
         </div>
         <p class="author" :class="{author_loading:loadingAuthor}">{{$t('slideOne.title')}}</p>
       </a>
@@ -31,7 +31,7 @@
     props: ['activeitem'],
     data () {
       return {
-        self: require('../assets/image/self.jpg')
+        self: require('../assets/image/self.68ac931.jpg')
       }
     },
     computed: {
