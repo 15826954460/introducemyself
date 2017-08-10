@@ -11,14 +11,11 @@ vue2.0 + vuex + i8n + vue-router + webpack + es6 + less + flex + svg + swiper + 
 
 ### demo
 
-##### 查看demo，请狠狠地点击这里 [http://demonodejs.applinzi.com] ，建议较新的Chrome,Fix,O....等浏览器进行浏览
+##### 查看demo，请狠狠地点击这里 [http://introduce.applinzi.com] ，建议较新的Chrome,Fix,O....等浏览器进行浏览
 ##### 移动端扫码：
 <img src="./static/img/erweima.png"/>
 
 ### 效果演示
-<img src="./static/img/pc_login.gif"/>
-
-##### pc端
 <img src="./static/img/pc_login.gif"/>
 
 
