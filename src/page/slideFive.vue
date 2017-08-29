@@ -65,6 +65,7 @@
   .slide_five {
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    .rel;
   }
   .slide_five_content {
     .pc;

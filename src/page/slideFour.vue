@@ -2,6 +2,7 @@
   <div class="slide_four slide_children" :style="{backgroundImage: 'url(' + skillbg + ')'}">
     <div class="skill_wrapper">
       <header class="title">{{$t('slideFour.title')}}</header>
+
       <ul class="skills_list">
         <li class="skills_list_item">
           <div class="canvas_wrapper">
@@ -60,6 +61,7 @@
           <p class="skill_type">jquery</p>
         </li>
       </ul>
+
       <div class="big_circle">
         <p class="html position"><span class="skill_name">HTML5</span></p>
         <p class="css position"><span class="skill_name">CSS3</span></p>
@@ -77,6 +79,7 @@
         </div>
       </div>
     </div>
+
     <p class="logic text_common" :class="{loadingLogic:loadingText}">{{$t('slideFour.logic')}}</p>
     <p class="prepare text_common" :class="{loadingPrepare:loadingText}">{{$t('slideFour.prepare')}}</p>
     <p class="study text_common" :class="{loadingStudy:loadingText}">{{$t('slideFour.study')}}</p>
@@ -174,6 +177,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     font-size: 0;
+    .rel;
   }
 
   .skill_wrapper {
