@@ -325,6 +325,7 @@
 
   .prepare {
     bottom: 12%;
+    .ellipsis;
   }
 
   .study {

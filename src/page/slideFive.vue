@@ -3,7 +3,6 @@
     <div class="slide_five_content">
       <p class="thanks">{{$t('slideFive.thanks')}}</p>
       <p class="time">{{$t('slideFive.time')}}</p>
-      <p class="luck">{{$t('slideFive.luck')}}</p>
     </div>
   </div>
 </template>

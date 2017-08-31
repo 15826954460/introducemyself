@@ -7,15 +7,14 @@
           <a class="img_wrapper img_common"
              :class="{img1: index === 0, img2: index ===1, img3: index ===2, img4: index ===3, img5: index ===4, img6: index ===5, img7: index ===6, img8: index ===7}"
              v-for="(item, index) in type" @click="judge(item, index)">
-            <img :src="img1" v-show="index === 0">
-            <img :src="img1" v-show="index === 1">
-            <img :src="img1" v-show="index === 2">
-            <img :src="img1" v-show="index === 3">
-            <img :src="img1" v-show="index === 4">
-            <img :src="img1" v-show="index === 5">
-            <img :src="img1" v-show="index === 6">
-            <img :src="img1" v-show="index === 7">
-            <img :src="img1" v-show="index === 8">
+            <img :src="quits" v-show="index === 0">
+            <img :src="nodejs" v-show="index === 1">
+            <img :src="elm" v-show="index === 2">
+            <img :src="paiGroup" v-show="index === 3">
+            <img :src="zhuxun" v-show="index === 4">
+            <img :src="huijiayou" v-show="index === 5">
+            <img :src="newyihe" v-show="index === 6">
+            <img :src="uCloud" v-show="index === 7">
             <div class="mark">
               <img :src="clickIcon" class="clickIcon">
             </div>
@@ -43,7 +42,7 @@
         <div class="product_wrapper" v-show="bounced">
           <div class="bounce_info_wrapper">
             <p class="bounce_info">{{$t('slideThree.bouncedInfo')}}</p>
-            <a class="dynamic" href=""></a>
+            <a class="dynamic"></a>
             <i class="close fa fa-remove" @click="closeBounced"></i>
           </div>
         </div>
@@ -58,19 +57,58 @@
     data () {
       return {
         slideTwoBg: require('../assets/image/03.jpg'),
-        img1: require('../assets/image/gamespic1.png'),
+        nodejs: require('../assets/image/nodejs.jpg'),
+        elm: require('../assets/image/elm.jpg'),
+        uCloud: require('../assets/image/uCloud.png'),
+        newyihe: require('../assets/image/newyihe.jpg'),
+        huijiayou: require('../assets/image/huijayou.jpg'),
+        zhuxun: require('../assets/image/zhuxun.png'),
+        paiGroup: require('../assets/image/paigroup.jpg'),
+        quits: require('../assets/image/qits.jpg'),
         clickIcon: require('../assets/image/click.svg'),
         isShowProjectDetail: false,
         bounce: false,
         type: [
-          {'url': 'http://pi-group.biz', 'type': 'pc'},
-          {'url': 'http://demonodejs.applinzi.com', 'type': 'app'},
-          {'url': 'http://demoelmwebapp.applinzi.com', 'type': 'app'},
-          {'url': 'http://demoelmwebapp.applinzi.com', 'type': 'pc'},
-          {'url': 'http://demoelmwebapp.applinzi.com', 'type': 'pc'},
-          {'url': 'http://demoelmwebapp.applinzi.com', 'type': 'pc'},
-          {'url': 'http://pi-group.biz', 'type': 'pc'},
-          {'url': 'http://pi-group.biz', 'type': 'pc'}
+          {
+            'url': 'http://pi-group.biz',
+            'type': 'pc',
+            'name': '派客帝国'
+          },
+          {
+            'url': 'http://demonodejs.applinzi.com',
+            'type': 'app',
+            'name': 'nodejs中文社区'
+          },
+          {
+            'url': 'http://demoelmwebapp.applinzi.com',
+            'type': 'app',
+            'name': '高仿饿了么'
+          },
+          {
+            'url': 'http://qits.com',
+            'type': 'pc',
+            'name': '量子'
+          },
+          {
+            'url': 'http://m.zhuxuncn.com',
+            'type': 'app',
+            'name': '筑讯中国'
+          },
+          {
+            'url': 'http://www.huijiayou.cn',
+            'type': 'pc',
+            'name': '惠家有购物商城'
+          },
+          {
+            'url': 'http://www.nyhbest.com',
+            'type': 'pc',
+            'name': '新依和官网'
+          },
+          {
+            'url': 'https://www.ucloud.cn',
+            'type': 'pc',
+            'name': 'uCould'
+          }
         ]
       }
     },
@@ -79,13 +117,15 @@
     },
     methods: {
       judge (item, index) { // 如果是pc端项目没有做适配就建议用户pc端查看
-        let as = document.querySelectorAll('.img_wrapper')
         if (item.type === 'pc') {
           this.$store.commit('setBounced', true)
-          document.querySelector('.dynamic').innerHTML = this.type[index].url
+          document.querySelector('.dynamic').innerHTML = this.type[index].name + ' : ' + this.type[index].url
           document.querySelector('.dynamic').href = this.type[index].url
+        } else if (item.type === 'ht') {
+          this.$store.commit('setBounced', true)
+          document.querySelector('.dynamic').innerHTML = this.type[index].name + '后台管理系统'
         } else {
-          as[index].href = this.type[index].url
+          location.href = this.type[index].url
         }
       },
       closeBounced () {
@@ -134,30 +174,30 @@
         width: 100%;
         height: 100%;
         transform-style: preserve-3d;
-        -moz-animation: round 15s infinite linear;
-        -o-animation: round 15s infinite linear;
-        -webkit-animation: round 15s infinite linear;
-        animation: round 15s infinite linear;
+      /*-moz-animation: round 15s infinite linear;*/
+      /*-o-animation: round 15s infinite linear;*/
+      -webkit-animation: round 15s infinite linear;
+      /*animation: round 15s infinite linear;*/
         &:hover {
-          -webkit-animation-play-state: paused;
-          -o-animation-play-state: paused;
-          -moz-animation-play-state: paused;
-          animation-play-state: paused;
-        }
+        -webkit-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        animation-play-state: paused;
       }
-      .img_common {
-        .abs;
+     }
+    .img_common {
+      .abs;
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+      img {
         width: 100%;
         height: 100%;
-        font-size: 0;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-        &:hover .mark {
-          height: 100%;
-        }
-        .mark {
+      }
+      &:hover .mark {
+        height: 100%;
+      }
+      .mark {
           .abs;
           font-size: 0;
           bottom: 0;
@@ -167,146 +207,160 @@
           overflow: hidden;
           z-index: 10;
           .transition(.3s);
-          .clickIcon {
-            .pc;
+        .clickIcon {
+          .pc;
             width: .3rem;
             height: .3rem;
           }
-        }
-      }
-      .img1 {
-        -webkit-transform: rotateY(45deg) translateZ(2.4rem);
-        -moz-transform: rotateY(45deg) translateZ(2.4rem);
-        -ms-transform: rotateY(45deg) translateZ(2.4rem);
-        -o-transform: rotateY(45deg) translateZ(2.4rem);
-        transform: rotateY(45deg) translateZ(2.4rem);
-      }
-      .img2 {
-        -webkit-transform: rotateY(90deg) translateZ(2.4rem);
-        -moz-transform: rotateY(90deg) translateZ(2.4rem);
-        -ms-transform: rotateY(90deg) translateZ(2.4rem);
-        -o-transform: rotateY(90deg) translateZ(2.4rem);
-        transform: rotateY(90deg) translateZ(2.4rem);
-      }
-      .img3 {
-        -webkit-transform: rotateY(135deg) translateZ(2.4rem);
-        -moz-transform: rotateY(135deg) translateZ(2.4rem);
-        -ms-transform: rotateY(135deg) translateZ(2.4rem);
-        -o-transform: rotateY(135deg) translateZ(2.4rem);
-        transform: rotateY(135deg) translateZ(2.4rem);
-      }
-      .img4 {
-        -webkit-transform: rotateY(180deg) translateZ(2.4rem);
-        -moz-transform: rotateY(180deg) translateZ(2.4rem);
-        -ms-transform: rotateY(180deg) translateZ(2.4rem);
-        -o-transform: rotateY(180deg) translateZ(2.4rem);
-        transform: rotateY(180deg) translateZ(2.4rem);
-      }
-      .img5 {
-        -webkit-transform: rotateY(225deg) translateZ(2.4rem);
-        -moz-transform: rotateY(225deg) translateZ(2.4rem);
-        -ms-transform: rotateY(225deg) translateZ(2.4rem);
-        -o-transform: rotateY(225deg) translateZ(2.4rem);
-        transform: rotateY(225deg) translateZ(2.4rem);
-      }
-      .img6 {
-        -webkit-transform: rotateY(270deg) translateZ(2.4rem);
-        -moz-transform: rotateY(270deg) translateZ(2.4rem);
-        -ms-transform: rotateY(270deg) translateZ(2.4rem);
-        -o-transform: rotateY(270deg) translateZ(2.4rem);
-        transform: rotateY(270deg) translateZ(2.4rem);
-      }
-      .img7 {
-        -webkit-transform: rotateY(315deg) translateZ(2.4rem);
-        -moz-transform: rotateY(315deg) translateZ(2.4rem);
-        -ms-transform: rotateY(315deg) translateZ(2.4rem);
-        -o-transform: rotateY(315deg) translateZ(2.4rem);
-        transform: rotateY(315deg) translateZ(2.4rem);
-      }
-      .img8 {
-        -webkit-transform: rotateY(360deg) translateZ(2.4rem);
-        -moz-transform: rotateY(360deg) translateZ(2.4rem);
-        -ms-transform: rotateY(360deg) translateZ(2.4rem);
-        -o-transform: rotateY(360deg) translateZ(2.4rem);
-        transform: rotateY(360deg) translateZ(2.4rem);
       }
     }
-    @-moz-keyframes round {
-      0% {
-        transform: rotate(0deg)
-      }
-      100% {
-        transform: rotate(-360deg)
-      }
+    .img1 {
+      -webkit-transform: rotateY(45deg) translateZ(2.4rem);
+      -moz-transform: rotateY(45deg) translateZ(2.4rem);
+      -ms-transform: rotateY(45deg) translateZ(2.4rem);
+      -o-transform: rotateY(45deg) translateZ(2.4rem);
+      transform: rotateY(45deg) translateZ(2.4rem);
     }
-    @-o-keyframes round {
-      0% {
-        transform: rotateY(0deg);
-      }
-      100% {
-        transform: rotateY(-360deg);
-      }
+
+    .img2 {
+      -webkit-transform: rotateY(90deg) translateZ(2.4rem);
+      -moz-transform: rotateY(90deg) translateZ(2.4rem);
+      -ms-transform: rotateY(90deg) translateZ(2.4rem);
+      -o-transform: rotateY(90deg) translateZ(2.4rem);
+      transform: rotateY(90deg) translateZ(2.4rem);
     }
-    @-webkit-keyframes round {
-      0% {
-        transform: rotateY(0deg);
-      }
-      100% {
-        transform: rotateY(-360deg);
-      }
+
+    .img3 {
+      -webkit-transform: rotateY(135deg) translateZ(2.4rem);
+      -moz-transform: rotateY(135deg) translateZ(2.4rem);
+      -ms-transform: rotateY(135deg) translateZ(2.4rem);
+      -o-transform: rotateY(135deg) translateZ(2.4rem);
+      transform: rotateY(135deg) translateZ(2.4rem);
     }
-    @-ms-keyframes round {
-      0% {
-        transform: rotateY(0deg);
-      }
-      100% {
-        transform: rotateY(-360deg);
-      }
+
+    .img4 {
+      -webkit-transform: rotateY(180deg) translateZ(2.4rem);
+      -moz-transform: rotateY(180deg) translateZ(2.4rem);
+      -ms-transform: rotateY(180deg) translateZ(2.4rem);
+      -o-transform: rotateY(180deg) translateZ(2.4rem);
+      transform: rotateY(180deg) translateZ(2.4rem);
     }
-    @keyframes round {
-      0% {
-        transform: rotateY(0deg);
-      }
-      10% {
-        transform: rotateY(36deg);
-      }
-      20% {
-        transform: rotateY(72deg);
-      }
-      30% {
-        transform: rotateY(108deg);
-      }
-      40% {
-        transform: rotateY(144deg);
-      }
-      50% {
-        transform: rotateY(180deg);
-      }
-      60% {
-        transform: rotateY(216deg);
-      }
-      70% {
-        transform: rotateY(252deg);
-      }
-      80% {
-        transform: rotateY(288deg);
-      }
-      90% {
-        transform: rotateY(324deg);
-      }
-      100% {
-        transform: rotateY(360deg);
-      }
+
+    .img5 {
+      -webkit-transform: rotateY(225deg) translateZ(2.4rem);
+      -moz-transform: rotateY(225deg) translateZ(2.4rem);
+      -ms-transform: rotateY(225deg) translateZ(2.4rem);
+      -o-transform: rotateY(225deg) translateZ(2.4rem);
+      transform: rotateY(225deg) translateZ(2.4rem);
     }
-    .github_left {
-      left: 2%;
+
+    .img6 {
+      -webkit-transform: rotateY(270deg) translateZ(2.4rem);
+      -moz-transform: rotateY(270deg) translateZ(2.4rem);
+      -ms-transform: rotateY(270deg) translateZ(2.4rem);
+      -o-transform: rotateY(270deg) translateZ(2.4rem);
+      transform: rotateY(270deg) translateZ(2.4rem);
     }
-    .github_right {
-      right: 2%;
+
+    .img7 {
+      -webkit-transform: rotateY(315deg) translateZ(2.4rem);
+      -moz-transform: rotateY(315deg) translateZ(2.4rem);
+      -ms-transform: rotateY(315deg) translateZ(2.4rem);
+      -o-transform: rotateY(315deg) translateZ(2.4rem);
+      transform: rotateY(315deg) translateZ(2.4rem);
     }
-    .github_left,
-    .github_right {
-      .abs;
+
+    .img8 {
+    -webkit-transform: rotateY(360deg) translateZ(2.4rem);
+    -moz-transform: rotateY(360deg) translateZ(2.4rem);
+    -ms-transform: rotateY(360deg) translateZ(2.4rem);
+    -o-transform: rotateY(360deg) translateZ(2.4rem);
+    transform: rotateY(360deg) translateZ(2.4rem);
+  }
+  }
+  @-moz-keyframes round {
+    0% {
+      transform: rotate(0deg)
+    }
+    100% {
+      transform: rotate(-360deg)
+    }
+  }
+
+  @-o-keyframes round {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-360deg);
+    }
+  }
+
+  @-webkit-keyframes round {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-360deg);
+    }
+  }
+
+  @-ms-keyframes round {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-360deg);
+    }
+  }
+
+  @keyframes round {
+    0% {
+      transform: rotateY(0deg);
+    }
+    10% {
+      transform: rotateY(36deg);
+    }
+    20% {
+      transform: rotateY(72deg);
+    }
+    30% {
+      transform: rotateY(108deg);
+    }
+    40% {
+      transform: rotateY(144deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    60% {
+      transform: rotateY(216deg);
+    }
+    70% {
+      transform: rotateY(252deg);
+    }
+    80% {
+      transform: rotateY(288deg);
+    }
+    90% {
+      transform: rotateY(324deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .github_left {
+    left: 2%;
+  }
+
+  .github_right {
+    right: 2%;
+  }
+
+  .github_left,
+  .github_right {
+    .abs;
       z-index: 10;
       top: 27%;
       font-size: 0;
@@ -316,12 +370,12 @@
       line-height: 25px;
       transform-style: preserve-3d;
       .github {
-        font-size: 14px;
-      }
+      font-size: 14px;
+    }
       .demo_name {
-        font-size: 14px;
-        color: rgba(255, 255, 255, .6);
-      }
+    font-size: 14px;
+    color: rgba(255, 255, 255, .6);
+  }
       .git_add,
       .online {
         font-size: 14px;
@@ -329,19 +383,19 @@
         line-height: 20px;
       }
       .lianjie {
-        .b;
+      .b;
         font-size: 14px;
         word-break: break-all;
         line-height: 20px;
-        .transition(.3s);
+      .transition(.3 s);
         color: #8BC6FA;
-        &:hover {
-          .cur;
-          text-decoration: underline;
-          color: #0A67F0;
-        }
+      &:hover {
+      .cur;
+        text-decoration: underline;
+        color: #0A67F0;
       }
-    }
+  }
+  }
   }
 
   .product_wrapper {
@@ -358,24 +412,26 @@
       height: 100px;
       background: rgba(0, 0, 0, .5);
       .pc;
-      .b-r(5px);
+      .b-r(5 px);
       .bounce_info {
         .pc;
-        top:40%;
+        top: 40%;
         width: 100%;
         font-size: 14px;
         color: @fff;
         line-height: 30px;
         .tc;
       }
-      .dynamic{
-        .pc;
-        top:60%;
-        font-size:12px;
+      .dynamic {
+        position:absolute;
+        top: 60%;
+        font-size: 12px;
+        width:100%;
+        .tc;
         color:@fff;
         .transition(.3s);
-        &:hover{
-          color:#3A9AFF;
+        &:hover {
+          color: #3A9AFF;
           text-decoration: underline;
         }
       }
@@ -422,49 +478,54 @@
   @media screen and (max-width: 650px) {
     #github_right,
     #github_left {
-      .pc;
-      .tc;
+    .pc;
+    .tc;
       width: 100%;
       line-height: 6px;
-      .github,
-      .git_add,
-      .online,
-      .demo_name,
-      .lianjie {
-        .inb;
-        font-size: 12px;
-      }
-      .github,
-      .git_add,
-      .online {
-        .mr(10px);
-      }
 
+    .github,
+    .git_add,
+    .online,
+    .demo_name,
+    .lianjie {
+    .inb;
+      font-size: 12px;
     }
 
-    #github_left {
-      top: 27%;
+    .github,
+    .git_add,
+    .online {
+    .mr(10 px);
     }
 
-    #github_right {
-      top: 85%;
-    }
+  }
+
+  #github_left {
+    top: 27%;
+  }
+
+  #github_right {
+    top: 85%;
+  }
+
   }
 
   @media screen and (max-width: 500px) {
     #github_left,
     #github_right {
-      .github,
-      .git_add,
-      .online,
-      .demo_name,
-      .lianjie {
-        .b;
-        line-height: 15px;
-        padding: 0;
-        margin: 0;
-      }
+
+    .github,
+    .git_add,
+    .online,
+    .demo_name,
+    .lianjie {
+    .b;
+      line-height: 15px;
+      padding: 0;
+      margin: 0;
     }
+  }
+
   }
 
   .slide-enter-active {
