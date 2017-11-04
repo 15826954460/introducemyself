@@ -19,7 +19,7 @@
         <slideFive :activeitem="swiperOption.activeitem"></slideFive>
       </swiper-slide>
       <swiper-slide>
-        <!--<heart :activeitem="swiperOption.activeitem"></heart>-->
+        <heart :activeitem="swiperOption.activeitem"></heart>
       </swiper-slide>
     </swiper>
     <guideline :activeitem="swiperOption.activeitem" :pageNum="pageNum"
@@ -59,7 +59,7 @@
             window.localStorage.setItem('activeIndex', this.activeitem)
           }
         },
-        pageNum: 5
+        pageNum: 6
       }
     },
     components: {
